@@ -3,7 +3,7 @@ apply plugin: 'eclipse'
 apply plugin: 'appengine'
 apply plugin: 'war'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 1.7
 version = '1.12'
 downloadSdk = true
 
@@ -13,11 +13,11 @@ repositories {
 
 dependencies {
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
-    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.4'
+    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.3'
     compile 'com.google.apis:google-api-services-datastore:v1beta2-rev11-1.17.0-rc'
     compile 'com.google.appengine:appengine-endpoints:1.7.5'
-    compile 'com.google.appengine:appengine-endpoints-deps:1.9.4'
-    compile 'com.google.appengine:appengine-local-endpoints:1.9.4'
+    compile 'com.google.appengine:appengine-endpoints-deps:1.9.3'
+    compile 'com.google.appengine:appengine-local-endpoints:1.9.3'
 }
 
 buildscript {
@@ -26,7 +26,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.google.appengine:gradle-appengine-plugin:1.9.4'
+        classpath 'com.google.appengine:gradle-appengine-plugin:1.9.3'
     }
 }
 
