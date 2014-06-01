@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.Named;
 
-@Api(name="providerinterface", version = "v1 ")
+@Api(name="providerinterface", version = "v1")
 public class ProviderInterface {
 	
 	public static ArrayList<Provider> Items = new ArrayList<Provider>();
