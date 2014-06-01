@@ -1,0 +1,97 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://i-need-559.appspot.com/_ah/api",
+  "name" : "providerinterface",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://i-need-559.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "methods" : {
+    "providerinterface.providerInterface.getString" : {
+      "path" : "provider/{id}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.ndch.ineed.ProviderInterface.getString",
+      "request" : {
+        "parameters" : {
+          "id" : {
+            "type" : "int32",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Provider" : {
+        "id" : "Provider",
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "location" : {
+            "$ref" : "Location"
+          },
+          "phoneNumber" : {
+            "type" : "string"
+          },
+          "serviceHours" : {
+            "$ref" : "JsonMap"
+          }
+        }
+      },
+      "Location" : {
+        "id" : "Location",
+        "type" : "object",
+        "properties" : {
+          "street" : {
+            "type" : "string"
+          },
+          "city" : {
+            "type" : "string"
+          },
+          "zipcode" : {
+            "type" : "string"
+          }
+        }
+      },
+      "JsonMap" : {
+        "id" : "JsonMap",
+        "type" : "object"
+      }
+    },
+    "methods" : {
+      "com.ndch.ineed.ProviderInterface.getString" : {
+        "response" : {
+          "$ref" : "Provider"
+        }
+      }
+    }
+  }
+}

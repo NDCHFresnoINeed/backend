@@ -4,6 +4,13 @@ public class Category {
 	private String type;
 	private ServiceHour serviceHour;
 	private Location location;
+	
+	public Category (final String type, final ServiceHour serviceHour, final Location location) {
+		setLocation(location);
+		setServiceHour(serviceHour);
+		setType(type);
+	}
+	
 	public String getType() {
 		return type;
 	}
