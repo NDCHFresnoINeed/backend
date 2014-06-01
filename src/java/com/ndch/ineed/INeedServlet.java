@@ -7,12 +7,10 @@ import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
 public class INeedServlet extends HttpServlet {
-	
+	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		resp.setContentType("text/plain");
 		resp.getWriter().println("Hello, world");
-		
-		
 	}
 	
 }
