@@ -4,30 +4,30 @@ This project will be to support our local area.  This will act as a resource tha
 
 ## Resources/Need/Services include:##
 ---
-Housing
-Clothing
-Food
-Medical Help
+Housing <br />
+Clothing <br />
+Food <br />
+Medical Help <br />
 
 ##Techonology:##
 ---
-Google App Engine
-Google DataStore
-Google SQL
+Google App Engine <br />
+Google DataStore <br />
+Google SQL <br />
 
 ##What Needs to be done:##
 ---
 This portion is the backend service.
-It needs the support a REST API to have a website and other mobile devices to access the data.
-The data will be saved in SQL Database or in the datastore. 
+It needs the support a REST API to have a website and other mobile devices to access the data. <br />
+The data will be saved in SQL Database or in the datastore. <br />
 
 It will need to be flexable so that we can utilize other API's to get data for the resources.
 
 
 ##So far what has been done is:##
 ---
-Basic classes to idicated what parts are needed.
-Gradle as the build automation.
+Basic classes to idicated what parts are needed. <br />
+Gradle as the build automation. <br />
 
 **Need Java 7**
 
